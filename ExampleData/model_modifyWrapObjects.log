@@ -1,0 +1,93 @@
+Checking motion C:\Users\Willi\Documents\Github\OpenSim_MuscleMomentArmsChecker\ExampleData\kinematics\IK_trial1.mot
+Elapsed time is 143.783928 seconds.
+Following discontinuities were detected in file 
+	C:/Users/Willi/Documents/Github/OpenSim_MuscleMomentArmsChecker/ExampleData/kinematics/IK_trial1.mot
+glmax1_l around hip_flexion_l at 0.38 seconds (frame 11)
+glmax1_l around hip_flexion_l at 0.67 seconds (frame 69)
+glmax1_l around hip_flexion_l at 1.315 seconds (frame 198)
+glmax1_l around hip_flexion_l at 1.56 seconds (frame 247)
+glmax1_l around hip_rotation_l at 0.38 seconds (frame 11)
+glmax1_l around hip_rotation_l at 1.315 seconds (frame 198)
+glmax1_l around hip_adduction_l at 0.38 seconds (frame 11)
+glmax1_l around hip_adduction_l at 1.315 seconds (frame 198)
+glmax1_r around hip_flexion_r at 1.035 seconds (frame 142)
+glmax1_r around hip_flexion_r at 1.115 seconds (frame 158)
+glmax1_r around hip_rotation_r at 1.035 seconds (frame 142)
+glmax1_r around hip_rotation_r at 1.115 seconds (frame 158)
+glmax1_r around hip_adduction_r at 1.035 seconds (frame 142)
+glmax1_r around hip_adduction_r at 1.115 seconds (frame 158)
+Checking motion C:\Users\Willi\Documents\Github\OpenSim_MuscleMomentArmsChecker\ExampleData\kinematics\IK_trial2.mot
+Elapsed time is 143.272681 seconds.
+Following discontinuities were detected in file 
+	C:/Users/Willi/Documents/Github/OpenSim_MuscleMomentArmsChecker/ExampleData/kinematics/IK_trial2.mot
+glmax1_l around hip_flexion_l at 1.78 seconds (frame 107)
+glmax1_l around hip_rotation_l at 1.78 seconds (frame 107)
+glmax1_l around hip_adduction_l at 1.78 seconds (frame 107)
+glmax1_r around hip_flexion_r at 2.255 seconds (frame 202)
+glmax1_r around hip_rotation_r at 2.255 seconds (frame 202)
+glmax1_r around hip_adduction_r at 2.255 seconds (frame 202)
+ 
+------------------------------------------------
+Iteration #2 these muscles have discontinuios moment arms:
+glmax1_l
+Gmax1_at_pelvis_l: radius decreased to 0.033026
+glmax1_r
+Gmax1_at_pelvis_r: radius decreased to 0.033026
+Checking motion C:\Users\Willi\Documents\Github\OpenSim_MuscleMomentArmsChecker\ExampleData\kinematics\IK_trial1.mot
+Elapsed time is 136.558326 seconds.
+Discontinuities detected for glmax1_l 
+Checking motion C:\Users\Willi\Documents\Github\OpenSim_MuscleMomentArmsChecker\ExampleData\kinematics\IK_trial2.mot
+Elapsed time is 142.595897 seconds.
+Discontinuities detected for glmax1_r glmax1_l 
+ 
+------------------------------------------------
+Iteration #3 these muscles have discontinuios moment arms:
+glmax1_l
+Gmax1_at_pelvis_l: radius decreased to 0.032026
+glmax1_r
+Gmax1_at_pelvis_r: radius decreased to 0.032026
+Checking motion C:\Users\Willi\Documents\Github\OpenSim_MuscleMomentArmsChecker\ExampleData\kinematics\IK_trial1.mot
+Elapsed time is 135.897211 seconds.
+Discontinuities detected for glmax1_l 
+Checking motion C:\Users\Willi\Documents\Github\OpenSim_MuscleMomentArmsChecker\ExampleData\kinematics\IK_trial2.mot
+Elapsed time is 144.552774 seconds.
+Discontinuities detected for glmax1_r glmax1_l 
+ 
+------------------------------------------------
+Iteration #4 these muscles have discontinuios moment arms:
+glmax1_l
+Gmax1_at_pelvis_l: radius decreased to 0.031026
+glmax1_r
+Gmax1_at_pelvis_r: radius decreased to 0.031026
+Checking motion C:\Users\Willi\Documents\Github\OpenSim_MuscleMomentArmsChecker\ExampleData\kinematics\IK_trial1.mot
+Elapsed time is 136.583599 seconds.
+Discontinuities detected for glmax1_l 
+Checking motion C:\Users\Willi\Documents\Github\OpenSim_MuscleMomentArmsChecker\ExampleData\kinematics\IK_trial2.mot
+Elapsed time is 143.868303 seconds.
+Discontinuities detected for glmax1_r glmax1_l 
+ 
+------------------------------------------------
+Iteration #5 these muscles have discontinuios moment arms:
+glmax1_l
+Gmax1_at_pelvis_l: radius decreased to 0.030026
+glmax1_r
+Gmax1_at_pelvis_r: radius decreased to 0.030026
+Checking motion C:\Users\Willi\Documents\Github\OpenSim_MuscleMomentArmsChecker\ExampleData\kinematics\IK_trial1.mot
+Elapsed time is 140.625363 seconds.
+Discontinuities detected for glmax1_l 
+Checking motion C:\Users\Willi\Documents\Github\OpenSim_MuscleMomentArmsChecker\ExampleData\kinematics\IK_trial2.mot
+Elapsed time is 187.095910 seconds.
+ 
+------------------------------------------------
+Iteration #6 these muscles have discontinuios moment arms:
+glmax1_l
+Gmax1_at_pelvis_l: radius decreased to 0.029026
+Checking motion C:\Users\Willi\Documents\Github\OpenSim_MuscleMomentArmsChecker\ExampleData\kinematics\IK_trial1.mot
+Elapsed time is 148.151882 seconds.
+Checking motion C:\Users\Willi\Documents\Github\OpenSim_MuscleMomentArmsChecker\ExampleData\kinematics\IK_trial2.mot
+Elapsed time is 150.864015 seconds.
+ 
+SUMMARY: 
+Gmax1_at_pelvis_l radius reduced from 0.034026 to 0.029026
+Gmax1_at_pelvis_r radius reduced from 0.034026 to 0.030026
+Model with modified wrapping object saved as ./ExampleData/model_modWO.osim
