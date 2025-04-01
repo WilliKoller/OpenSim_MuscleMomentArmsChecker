@@ -10,6 +10,12 @@ The **OpenSim Muscle Moment Arms Checker** is a MATLAB tool designed to detect a
 - **Correction mechanism** that adjusts Wrap Object radii incrementally
 - **Verified on a large dataset** (940 patients, 1,536 gait analysis sessions, showed more that 1600 discontinuities and only 17 could not be resolved automatically)
 
+## Citation
+
+If you use this tool in your research, please cite:
+
+> Koller, W., Horsak, B., Kranzl, A., Unglaube, F., Baca, A., & Kainz, H. (2025). Physiological plausible muscle paths: A MATLAB tool for detecting and resolving muscle path discontinuities in musculoskeletal OpenSim models. _Gait & Posture, 117_, S21-S22. https://doi.org/10.1016/j.gaitpost.2025.01.063
+
 ## Installation
 
 ### Requirements
@@ -81,12 +87,6 @@ To use this tool, ensure you have:
 4. **Correct Discontinuities**: The script modifies the radius of Wrap Objects in 1mm increments until smooth moment arms are achieved (max. 10 iterations = 1cm).
 5. **Export Corrected Model**: The updated model with corrected muscle paths is saved for further simulations.
 6. **Usage of Corrected Model**: This updated model should be used for all further simulations that involve muscles, e.g. Static Optimization.
-
-## Citation
-
-If you use this tool in your research, please cite:
-
-> Koller, W., Horsak, B., Kranzl, A., Unglaube, F., Baca, A., & Kainz, H. (2025). Physiological plausible muscle paths: A MATLAB tool for detecting and resolving muscle path discontinuities in musculoskeletal OpenSim models. _Gait & Posture, 117_, S21-S22. https://doi.org/10.1016/j.gaitpost.2025.01.063
 
 # License
 
