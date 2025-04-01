@@ -16,17 +16,19 @@ import org.opensim.modeling.*
 clear; close all;
 
 stepSize = 0.001; % value which is used to shrink wrap objects each iteration
-threshold = 0.004; % value that defines the threshold for discontinuity detection+
+threshold = 0.0028; % value that defines the threshold for discontinuity detection+
 filterFrequency = 6; % filter kinematic from .mot files; use -1 to disable
 
-kinematicFolder = './ExampleData/kinematics';
+kinematicFolder = './ExampleData\kinematics';
 kinematicFileFilter = '*.mot';
-modelFilename = './ExampleData/model.osim';
+modelFilename = './ExampleData\model.osim';
 
 motFiles = dir(fullfile(kinematicFolder, '**', kinematicFileFilter));
-motionFileNames = cell(1, numel(motFiles));
+motionFileNames = []; %cell(1, numel(motFiles));
 for m = 1 : numel(motFiles)
-    motionFileNames{m} = fullfile(motFiles(m).folder, motFiles(m).name);
+    if ~contains(motFiles(m).folder, '_reducedTorsoMarkers')
+        motionFileNames{end+1} = fullfile(motFiles(m).folder, motFiles(m).name);
+    end
 end
 
 [p, f] = fileparts(modelFilename);
@@ -34,23 +36,22 @@ delete(fullfile(p, [f '_modifyWrapObjects.log']));
 diary(fullfile(p, [f '_modifyWrapObjects.log']));
 figFilename = fullfile(p, [f '_momentArms.fig']);
 
-% define the coordinates that are put into the position obtained from
-% .mot file
 
+% define the coordinates that are put into the position obtained from .mot file
 % for rajagopal or gait2392 model
 coordinateNames = {'hip_flexion_l', 'hip_rotation_l', 'hip_adduction_l', ...
-    'hip_flexion_r', 'hip_rotation_r', 'hip_adduction_r', ...
-    'knee_angle_l', 'knee_angle_r'};
+     'hip_flexion_r', 'hip_rotation_r', 'hip_adduction_r', ...
+     'knee_angle_l', 'knee_angle_r'};
 
 % % for lernagopal
 % coordinateNames = {'hip_flexion_l', 'hip_rotation_l', 'hip_adduction_l', ...
 %     'hip_flexion_r', 'hip_rotation_r', 'hip_adduction_r', ...
-%     'knee_angle_l', 'knee_angle_r', 'knee_rotation_l', 'knee_rotation_r', 'knee_adduction_l', 'knee_adduction_r'};
+%     'knee_angle_l', 'knee_angle_r', 'knee_adduction_l', 'knee_adduction_r', ...
+%     'ankle_angle_l', 'ankle_angle_r', 'subtalar_angle_l', 'subtalar_angle_r'};
 
-% to check for muscles that span the hip and knee joint
+% muscle that contain one of these texts will be checked by the script
 muscleFilter = {'add', 'gl', 'semi', 'bf', 'pec', 'grac', 'piri', 'sar', ...
     'tfl', 'iliacus', 'psoas', 'rect', 'gas', 'quad_fem', 'gem', 'peri', 'vas'};
-% to check for muscles that span the hip and knee joint
 
 % calc muscle moment arms once
 [momentArmsAreWrong, ~, discontinuities, muscleNames, ~] = calcMuscleMomentArmsForMotion(modelFilename, ...
@@ -220,9 +221,9 @@ if momentArmsAreWrong
         end
         disp(['Model with modified wrapping object saved as ' newModelFilename]);
     else
-        fprintf(2, '------------------------------------------------------------------------------');
-        fprintf(2, 'Something went wrong - probably the optimization aborted after max. iterations');
-        fprintf(2, '------------------------------------------------------------------------------');
+        fprintf(2, '------------------------------------------------------------------------------\n');
+        fprintf(2, 'Something went wrong - probably the optimization aborted after max. iterations\n');
+        fprintf(2, '------------------------------------------------------------------------------\n');
     end
 end
 diary off;
