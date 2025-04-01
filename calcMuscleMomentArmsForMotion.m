@@ -169,7 +169,7 @@ for u = 1 : numel(motionFilenames)
         sgtitle([modelFilename ' - ' motionFilenames{u}], 'Interpreter', 'none');
         for i = 1 : numel(coordinateNames)
             nexttile;
-            ylabel([coordinateNames{i} ' moment arm [mm]'], 'Interpreter', 'none');
+            ylabel([coordinateNames{i} ' moment arm [m]'], 'Interpreter', 'none');
             xlabel('time [frame]');
             hold on;
             legendArr = {};
